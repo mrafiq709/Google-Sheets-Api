@@ -36,7 +36,7 @@ class GoogleSheetsService
         $client->setApplicationName('Google Sheets Demo');
         $client->setRedirectUri('http://127.0.0.1:8000/googlesheet');
         $client->setScopes(Sheets::SPREADSHEETS);
-        $client->setAuthConfig('credentials.json');
+        $client->setAuthConfig(storage_path('credentials.json'));
         $client->setAccessType('offline');
 
         return $client;
